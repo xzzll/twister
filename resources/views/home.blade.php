@@ -8,7 +8,14 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    You are logged in!<br/>
+                    welcome to twister!
+                    <form class="" action="{{url('twist')}}" method="get">
+
+                    please  return:<br/>
+                    <input type="submit" name="" value="twisters">
+                    </form>
+                    </div>
                 </div>
             </div>
         </div>
