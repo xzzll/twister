@@ -42,7 +42,9 @@ class TwistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('twists')->insert(
+            'user_id' => $request->User_id, 
+        );
     }
 
     /**
