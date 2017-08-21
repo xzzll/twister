@@ -5,7 +5,7 @@
 
 <div class="col-sm-offset-2 col-sm-6">
 
-<form class="form-horizontal" role="form">
+<form action="" class="form-horizontal" role="form" method="POST">
   <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">TETLE</label>
     <div class="col-sm-10">

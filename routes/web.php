@@ -26,5 +26,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/test', 'TestController@test');
 Route::get('/insert', 'TestController@insert');
 
+
 Route::get('/twist','TwistController@index')->name('home');
 Route::get('/twist/{twist}','TwistController@show');
