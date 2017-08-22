@@ -29,3 +29,11 @@ Route::get('/insert', 'TestController@insert');
 
 Route::get('/twist','TwistController@index')->name('home');
 Route::get('/twist/{twist}','TwistController@show');
+
+//github sociate
+Route::any('/github','OAuthController@redirectToProvider');
+Route::any('/github/callback','OAuthController@handleProviderCallback');
+
+
+//User Follow
+Route::get('/follow/{user}','UserController@followOrNot');
