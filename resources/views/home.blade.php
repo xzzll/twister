@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     You are logged in!<br/>
                     welcome to twister!
-                    <form class="" action="{{url('twist')}}" method="get">
+                    <form class="" action="{{url('test')}}" method="get">
 
                     please  return:<br/>
                     <input type="submit" name="" value="twisters">

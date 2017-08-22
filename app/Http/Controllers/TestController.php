@@ -13,11 +13,13 @@ class TestController extends Controller
     }
 
 
-    public function test()
+    public function test(Request $rq)
     {
-        return view('test');
+        $rq = $rq->all();
+        return view('test',compact('rq'));
     }
-    public function insert(){
+    public function insert(Request $rq){
+
         return view('insert');
     }
 
