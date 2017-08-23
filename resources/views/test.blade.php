@@ -56,9 +56,9 @@
 
      <div class="row">
       <div class="thumbnail">
+          <h3>{{ Auth::user()->name }}</h3>
        <img src="{{URL::asset('img/1.jpg')}}" alt="" />
        <div class="caption">
-        <h3>缩略图标签</h3>
         <p> <a href="#" class="btn btn-primary" role="button"> 按钮 </a> <a href="#" class="btn btn-default" role="button"> 按钮 </a> </p>
        </div>
       </div>
@@ -106,46 +106,38 @@
       <!-- 轮播（Carousel）导航 -->
       <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹ </a>
       <a class="carousel-control right" href="#myCarousel" data-slide="next">› </a>
-     </div>
+      <p></p>
+
+  </div>
      <!-- 结束,第三部分文章标题列表 -->
-     <div class="">
-        <a href="#"><h2>文章标题</h2></a>
-        <p>{{$rq['pic']}}</p>
-        <p>{{$rq['yy']}}</p>
 
+
+
+     @foreach($art as $t)
+
+     <div class="row">
+         <div class="col-sm-8 col-md-12" >
+             <a href="#"><h2>{{$t['art_group']}}</h2></a>
+             <!-- <p>{{$t['art_id']}}</p>
+             <p>{{$t['user_id']}}</p> -->
+             <p>{{$t['art_content']}}</p>
+              <div class="thumbnail" style="background-color: #dedef8;">
+                <img src="{{$t['pic']}}" alt="">
+              </div>
+
+              <a href="{{url('pinglun',$t['id'])}}">评论</a>
+         </div>
 
 
      </div>
-     <div class="">
-        <a href="#"><h2>文章标题</h2></a>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
 
-     </div>
-     <div class="">
-        <a href="#"><h2>文章标题</h2></a>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
 
-     </div>
-     <div class="">
-        <a href="#"><h2>文章标题</h2></a>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
 
-     </div>
+     @endforeach
+
+
+
+
     </div>
     <div class="clearfix visible-xs"></div>
     <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;">

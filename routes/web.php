@@ -24,7 +24,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::any('/test', 'TestController@test');
+Route::get('/test', 'TestController@twistt');
 Route::get('/insert', 'TestController@insert');
+Route::get('/ping', 'TestController@ping');
+Route::any('/pingadd', 'TestController@pingadd');
+Route::get('/pinglun/{id}', 'TestController@pingadd');
+
+
 
 
 Route::get('/twist','TwistController@index')->name('home');
